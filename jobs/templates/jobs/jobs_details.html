@@ -1,0 +1,11 @@
+{% extends 'mysite/base.html'%}
+
+
+{% block content %}
+    <h3 class="subtitle has-text-centered"> Jobs Description </h3>
+
+    <h1 class="title">{{ job.title }} </h1>
+    <p class="is-size-4">{{job.short_description}} </p>
+    <p class="title is-4">{{ job.long_description }} </p>
+
+{% endblock %}

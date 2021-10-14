@@ -1,9 +1,13 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
+from jobs.models import Job
+
+
 # Create your views here.
 def home(request):
-    return render(request, 'mysite/home.html')
+    jobs = Job.objects.all()[0:4]
+    return render(request, 'mysite/home.html', {'jobs':jobs})
 
 
 def signup(request):
