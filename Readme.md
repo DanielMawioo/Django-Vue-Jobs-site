@@ -13,3 +13,5 @@ git clone https://github.com/DanielMawioo/Django-Vue-Jobs-site.git
 pip install -r requirements.txt
 ```
 ```bash
+python manage.py runserver
+```
