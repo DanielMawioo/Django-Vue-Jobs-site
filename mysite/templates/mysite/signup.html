@@ -7,7 +7,19 @@
         <div class="column is-6 is-offset-3">
             <h1>Sign up</h1>
 
-            <p>Show sign up here</p>
+            <form method="post" action=".">
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-success">
+                            sign up
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
