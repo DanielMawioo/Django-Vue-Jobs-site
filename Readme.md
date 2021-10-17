@@ -23,8 +23,8 @@ python manage.py runserver
 - 2. Employers 
 
 ### Authentication
-sign-up and login using django auth library
-Add profile picture and Edit bio information.
+- sign-up and login using django auth library
+- Add profile picture and Edit bio information.
 
 ## other general funtionalities
 - 3. Submit jobs
