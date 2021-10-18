@@ -24,7 +24,7 @@ python manage.py runserver
 
 ### Authentication
 - sign-up and login using django auth library
-- Add profile picture and Edit bio information.
+-  Add profile picture and Edit bio information.
 
 ## other general funtionalities
 - 3. Submit jobs
