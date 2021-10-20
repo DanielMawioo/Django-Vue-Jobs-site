@@ -1,16 +1,14 @@
-import re
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
-from jobs.models import Job
-from userprofiles.models import Userprofile
 
+from job.models import Job
+from userprofile.models import Userprofile
 
-# Create your views here.
-def home(request):
-    jobs = Job.objects.all()[0:4]
-    return render(request, 'mysite/home.html', {'jobs':jobs})
+def frontpage(request):
+    jobs = Job.objects.filter(status=Job.ACTIVE).order_by('-created_at')[0:3]
 
+    return render(request, 'mysite/frontpage.html', {'jobs': jobs})
 
 def signup(request):
     if request.method == 'POST':
@@ -31,9 +29,7 @@ def signup(request):
             login(request, user)
 
             return redirect('dashboard')
-
     else:
         form = UserCreationForm()
 
-
-    return render(request, 'mysite/signup.html', {'form':form})
+    return render(request, 'mysite/signup.html', {'form': form})

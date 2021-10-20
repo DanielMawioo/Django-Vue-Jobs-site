@@ -40,8 +40,9 @@ INSTALLED_APPS = [
 
     #apps
     'mysite',
-    'jobs',
-    'userprofiles',
+    'job',
+    'userprofile',
+    'notification'
 ]
 
 MIDDLEWARE = [
