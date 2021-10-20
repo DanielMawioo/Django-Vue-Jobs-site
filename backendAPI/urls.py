@@ -23,7 +23,7 @@ urlpatterns = [
     path('', frontpage, name='frontpage'),
     path('signup/', signup, name='signup'),
     path('logout/', views.LogoutView.as_view(), name='logout'),
-    path('login/', views.LoginView.as_view(template_name='core/login.html'), name='login'),
+    path('login/', views.LoginView.as_view(template_name='mysite/login.html'), name='login'),
     path('admin/', admin.site.urls),
     path('dashboard/', include('userprofile.urls')),
     path('notifications/', include('notification.urls')),
