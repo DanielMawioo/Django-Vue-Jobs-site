@@ -6,7 +6,7 @@ from job.models import Job
 from userprofile.models import Userprofile
 
 def frontpage(request):
-    jobs = Job.objects.filter(status=Job.ACTIVE).order_by('-created_at')[0:3]
+    jobs = Job.objects.filter(status=Job.ACTIVE).order_by('-created_at')[0:4]
 
     return render(request, 'mysite/frontpage.html', {'jobs': jobs})
 
